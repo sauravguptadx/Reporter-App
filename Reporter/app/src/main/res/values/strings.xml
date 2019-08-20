@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Reporter</string>
+    <string name="button111">Button111</string>
+    <string name="button">Button</string>
+    <string name="we_reporter">WE-Reporter</string>
+    <string name="in_day_to_day_life_we_the_common_people_face_different_types_of_social_problems_around_us_but_most_often_these_issues_cannot_be_reported_properly_to_the_proper_authorities_due_to_some_massive_roadblocks_between_victim_and_concerned_authorities_security_threat_political_pressure_lack_of_knowledge_about_responsible_authorities_are_the_most_prevalent_obstacles_in_our_country_also_there_exists_negligence_of_related_authority_like_police_rab_etc_to_overcome_these_roadblocks_we_want_to_build_ureporter_a_unified_online_reporting_system_which_will_send_the_reports_as_soon_as_possible_to_proper_authorities_after_successful_completion_of_several_validation_steps_and_reporters_personal_information_will_be_hidden_for_this_purpose_we_will_build_a_central_repository_system_to_store_the_reports_from_common_people_here_people_can_also_share_their_experiences_supplement_the_previous_reports_compliment_about_any_authority_we_will_generate_periodical_reports_through_mining_the_valid_data_and_public_survey_which_depicts_the_real_scenario_of_the_society">In day-to-day life, we, the common people, face different types of social problems around us. But most often these issues cannot be reported properly to the proper authorities due to some massive roadblocks between victim and concerned authorities. Security threat, political pressure, lack of knowledge about responsible authorities are the most prevalent obstacles in our country. Also, there exists negligence of related authority like Police, RAB etc. To overcome these roadblocks, we want to build uReporter, a unified online reporting system, which will send the reports as soon as possible to proper authorities after successful completion of several validation steps and reporters\' personal information will be hidden. For this purpose, we will build a central repository system to store the reports from common people. Here, people can also share their experiences, supplement the previous reports, compliment about any authority. We will generate periodical reports through mining the valid data and public survey which depicts the real scenario of the society.</string>
+    <string name="submit_report">Submit Report</string>
+    <string-array name="authority">
+
+        <item>Hod </item>
+        <item>Provost </item>
+        <item>Professor </item>
+        <item>Associate Prof </item>
+        <item>Assistant Prof </item>
+        <item>Lecturer </item>
+
+    </string-array>
+
+    <string-array name="department">
+
+        <item>CSE</item>
+        <item>EEE </item>
+        <item>CE </item>
+        <item>ME </item>
+        <item>WRE </item>
+        <item>URP </item>
+
+    </string-array>
+
+
+    <string-array name="sauthority">
+
+        <item>All </item>
+        <item>Hod </item>
+        <item>Provost </item>
+        <item>Professor </item>
+        <item>Associate Prof </item>
+        <item>Assistant Prof </item>
+        <item>Lecturer </item>
+
+    </string-array>
+
+    <string-array name="sdepartment">
+
+        <item>All </item>
+        <item>CSE</item>
+        <item>EEE </item>
+        <item>CE </item>
+        <item>ME </item>
+        <item>WRE </item>
+        <item>URP </item>
+
+    </string-array>
+</resources>

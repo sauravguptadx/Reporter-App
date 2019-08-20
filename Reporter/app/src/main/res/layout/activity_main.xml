@@ -1,0 +1,2382 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.farzana.reporter.MainActivity">
+
+    <TabHost
+        android:id="@+id/tabHost"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TabWidget
+                android:id="@android:id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"/>
+
+            <FrameLayout
+                android:id="@android:id/tabcontent"
+                android:layout_width="match_parent"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:focusable="true"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:id="@+id/tab4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ScrollView
+                        android:id="@+id/layout_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/no_padding"
+                            android:descendantFocusability="beforeDescendants"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textview_login"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/backgroundborder"
+                                android:clickable="false"
+                                android:text="Log In"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="25dp" />
+
+                            <TextView
+                                android:id="@+id/textview_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Username"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/editText_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="user.name" />
+
+                            <TextView
+                                android:id="@+id/textview_email2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Password"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/editText_pass"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-30dp"
+                                android:ems="10"
+                                android:inputType="textPassword" />
+
+                            <Button
+                                android:id="@+id/button_login"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="80dp"
+                                android:layout_marginStart="80dp"
+                                android:layout_marginTop="30dp"
+                                android:text="Log In" />
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/layout_detailu"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/no_padding"
+                        android:orientation="vertical"
+                        android:visibility="visible">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/customborder_gray"
+                            android:text="Detail Report"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textSize="20dp" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="15dp">
+
+                            <TableLayout
+                                android:id="@+id/detail_tableu"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:shrinkColumns="0"
+                                android:stretchColumns="0">
+
+                                <TableRow
+                                    android:id="@+id/tablerow_report"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_reportu"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="@drawable/no_padding"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/customborder_gray"
+                                            android:text="Report"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                            android:textSize="20dp" />
+
+                                        <FrameLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp">
+
+                                            <TextView
+                                                android:id="@+id/tv_reportidu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="120dp"
+                                                android:layout_marginStart="120dp"
+                                                android:text="1"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="Report Id : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="40dp"
+                                                android:text="User ID : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/tv_useru"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginLeft="90dp"
+                                                android:layout_marginStart="90dp"
+                                                android:layout_marginTop="40dp"
+                                                android:text="surajsingh"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="80dp"
+                                                android:text="Responsible : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/tv_authorityu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="110dp"
+                                                android:text="HoD, CSE, BUET"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="150dp"
+                                                android:text="Submission Time : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/tv_report_timeu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="180dp"
+                                                android:text="2017-10-08 13:28:29"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="220dp"
+                                                android:text="Description : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+
+                                            <TextView
+                                                android:id="@+id/tv_descriptionu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="250dp"
+                                                android:text="We will be looking forward for ur request."
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+
+                                        </FrameLayout>
+
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tablerow_feedback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_feedbacku"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="@drawable/no_padding"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/customborder_gray"
+                                            android:text="Authority Feedback"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                            android:textSize="20dp" />
+
+                                        <FrameLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:padding="10dp">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:text="Authority ID : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/tv_authorityidu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="30dp"
+                                                android:text="HoD, CSE, BUET"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="70dp"
+                                                android:text="Submission Time : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/tv_feedback_timeu"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="100dp"
+                                                android:text="2017-10-08 13:28:29"
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginTop="140dp"
+                                                android:text="Feedback : "
+                                                android:textColor="#000000"
+                                                android:textSize="20dp"
+                                                android:textStyle="normal|bold" />
+
+
+                                            <TextView
+                                                android:id="@+id/tv_feedbacku"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="170dp"
+                                                android:text="We will be looking forward for ur request."
+                                                android:textColor="#000000"
+                                                android:textSize="20dp" />
+
+
+                                        </FrameLayout>
+
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tr_feedback"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px"
+                                    android:visibility="gone">
+
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_givefeedback"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="0dp"
+                                        android:layout_marginTop="30dp"
+                                        android:background="@drawable/no_padding"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/customborder_gray"
+                                            android:text="FeedBack"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                            android:textSize="20dp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="12dp"
+                                            android:descendantFocusability="beforeDescendants"
+                                            android:focusable="true"
+                                            android:focusableInTouchMode="true"
+                                            android:orientation="vertical">
+
+
+                                            <TextView
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginVertical="10dp"
+                                                android:text="Feedback"
+                                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                                android:textSize="22sp"
+                                                android:textStyle="normal|bold" />
+
+                                            <EditText
+                                                android:id="@+id/editText_feedback"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginHorizontal="10dp"
+                                                android:layout_marginVertical="10dp"
+                                                android:background="@drawable/cell_shape"
+                                                android:drawableTop="@color/colorPrimary"
+                                                android:ems="10"
+                                                android:gravity="top|left"
+                                                android:inputType="textMultiLine"
+                                                android:lines="8"
+                                                android:maxLines="10"
+                                                android:minLines="6"
+                                                android:scrollbars="vertical"
+                                                android:theme="@style/Theme.AppCompat.Light" />
+
+                                            <LinearLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:layout_marginHorizontal="50dp"
+                                                android:layout_marginVertical="30dp"
+                                                android:gravity="right|center_vertical"
+                                                android:orientation="horizontal">
+
+                                                <Button
+                                                    android:id="@+id/reset_feedback"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="Reset" />
+
+                                                <Button
+                                                    android:id="@+id/feedback_button"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1"
+                                                    android:text="Submit" />
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+                                </TableRow>
+
+                                <TableRow
+                                    android:id="@+id/tr_usercommentsu"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                    <LinearLayout
+                                        android:id="@+id/layout_usercommentsu"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/no_padding"
+                                        android:orientation="vertical"
+                                        android:visibility="visible">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:background="@drawable/customborder_gray"
+                                            android:text="User Comments"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                            android:textSize="20dp" />
+
+                                        <TableLayout
+                                            android:id="@+id/comments_tableu"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:layout_margin="10dp"
+                                            android:shrinkColumns="0"
+                                            android:stretchColumns="0">
+
+
+                                        </TableLayout>
+
+                                    </LinearLayout>
+                                </TableRow>
+
+
+                            </TableLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_listview_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ListView
+                            android:id="@+id/listview_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_listview_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ListView
+                            android:id="@+id/listview_login"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_listview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <ListView
+                            android:id="@+id/listview"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:id="@+id/scroll_update"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/layout_update"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/no_padding"
+                            android:descendantFocusability="beforeDescendants"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/textview_update"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/backgroundborder"
+                                android:clickable="false"
+                                android:text="Update Information"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="25dp" />
+
+                            <TextView
+                                android:id="@+id/textview_update_fullname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Full Name"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_update_fullname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="Saurav Gupta" />
+
+                            <TextView
+                                android:id="@+id/textview_update_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Contact Number"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_update_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="01709099508" />
+
+                            <TextView
+                                android:id="@+id/textview_update_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Email ID"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_update_contact2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="hello.world@gmail.com" />
+
+                            <TextView
+                                android:id="@+id/textview_update_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Password"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_update_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-30dp"
+                                android:ems="10"
+                                android:hint="minimum 6 characters"
+                                android:inputType="textPassword" />
+
+                            <TextView
+                                android:id="@+id/textview_update_cpassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Confirm Password"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_update_cpassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-30dp"
+                                android:ems="10"
+                                android:hint="Retype your password"
+                                android:inputType="textPassword" />
+
+                            <LinearLayout
+                                android:id="@+id/layout_button_update"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="30dp"
+                                android:gravity="right|center_vertical"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/button_update_reset"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Reset" />
+
+                                <Button
+                                    android:id="@+id/button_update"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Update" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ScrollView
+                        android:id="@+id/scroll_user_profile"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/layout_user_profile"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/no_padding"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textview_user_profile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customborder_gray"
+                                android:text="Personal Information"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                android:textSize="20dp" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="20dp">
+
+                                <FrameLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TextView
+                                        android:id="@+id/textview_userid"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="80dp"
+                                        android:layout_marginStart="80dp"
+                                        android:text="1"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView6"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:text="User Id : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:id="@+id/textView8"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="40dp"
+                                        android:text="User Type : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:id="@+id/textview_usertype"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="120dp"
+                                        android:layout_marginStart="120dp"
+                                        android:layout_marginTop="40dp"
+                                        android:text="reporter"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView9"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="80dp"
+                                        android:text="Full Name : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:id="@+id/textview_fullname"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="120dp"
+                                        android:layout_marginStart="120dp"
+                                        android:layout_marginTop="80dp"
+                                        android:text="Saurav Gupta"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView10"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="120dp"
+                                        android:text="Contact Number : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:id="@+id/textview_usercontact"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="170dp"
+                                        android:layout_marginStart="170dp"
+                                        android:layout_marginTop="120dp"
+                                        android:text="01709099508"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView21"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="160dp"
+                                        android:text="User"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/textview_username"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="100dp"
+                                        android:layout_marginStart="100dp"
+                                        android:layout_marginTop="160dp"
+                                        android:text="hello.world@gmail.com"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView22"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="200dp"
+                                        android:text="Submitted Reports : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/textview_user_submitted"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="200dp"
+                                        android:layout_marginStart="200dp"
+                                        android:layout_marginTop="200dp"
+                                        android:text="0"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView23"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="240dp"
+                                        android:text="Registration Time : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/textview_user_regtime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="200dp"
+                                        android:layout_marginStart="200dp"
+                                        android:layout_marginTop="240dp"
+                                        android:text="2017-10-08 13:28:29"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+
+                                    <TextView
+                                        android:id="@+id/textView24"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="280dp"
+                                        android:text="Update Time : "
+                                        android:textColor="#000000"
+                                        android:textSize="20dp"
+                                        android:textStyle="normal|bold" />
+
+
+                                    <TextView
+                                        android:id="@+id/textview_user_updatetime"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="150dp"
+                                        android:layout_marginStart="150dp"
+                                        android:layout_marginTop="280dp"
+                                        android:text="2017-10-08 13:28:29"
+                                        android:textColor="#000000"
+                                        android:textSize="20dp" />
+                                </FrameLayout>
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ScrollView
+                        android:id="@+id/scroll_user_report"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:id="@+id/layout_user"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_marginTop="30dp"
+                            android:background="@drawable/no_padding"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <TextView
+                                android:id="@+id/textview_userreport"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customborder_gray"
+                                android:text="Total Reports"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                android:textSize="20dp" />
+
+                            <HorizontalScrollView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="20dp"
+                                android:layout_marginVertical="20dp">
+
+                                <TableLayout
+                                    android:id="@+id/tablelayout_user"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent">
+
+                                    <TableRow
+                                        android:id="@+id/tr_user_reports"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:minHeight="60px">
+
+
+                                        <TextView
+                                            android:id="@+id/textview_u_reportid"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/cell_shape"
+                                            android:padding="10dp"
+                                            android:text="Report_ID"
+                                            android:textAlignment="center"
+                                            android:textColor="#000000"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/textview_user_subtime"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/cell_shape"
+                                            android:padding="10dp"
+                                            android:text="Submission_Time"
+                                            android:textAlignment="center"
+                                            android:textColor="#000000"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/textview_user_short_desc"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/cell_shape"
+                                            android:padding="10dp"
+                                            android:text="Short Description"
+                                            android:textAlignment="center"
+                                            android:textColor="#000000"
+                                            android:textStyle="normal|bold" />
+
+                                        <TextView
+                                            android:id="@+id/textview_user_respons"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@drawable/cell_shape"
+                                            android:padding="10dp"
+                                            android:text="Responsible_Authority"
+                                            android:textAlignment="center"
+                                            android:textColor="#000000"
+                                            android:textStyle="normal|bold" />
+
+                                    </TableRow>
+
+
+                                </TableLayout>
+
+                            </HorizontalScrollView>
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <ScrollView
+                        android:id="@+id/scroll_signup"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:id="@+id/layout_signup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="20dp"
+                            android:background="@drawable/no_padding"
+                            android:descendantFocusability="beforeDescendants"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/textview_signup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/backgroundborder"
+                                android:clickable="false"
+                                android:text="Sign Up"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="25dp" />
+
+                            <TextView
+                                android:id="@+id/textview_full"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Full Name"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_fullname"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="Firstname Lastname" />
+
+                            <TextView
+                                android:id="@+id/textview_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Contact Number"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_contact"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="01XXXXXXXXX" />
+
+                            <TextView
+                                android:id="@+id/textview_sign_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Username"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-25dp"
+                                android:ems="10"
+                                android:hint="username" />
+
+                            <TextView
+                                android:id="@+id/textview_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Password"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_password"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-30dp"
+                                android:ems="10"
+                                android:hint="minimum 6 characters"
+                                android:inputType="textPassword" />
+
+                            <TextView
+                                android:id="@+id/textview_cpassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Confirm Password"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/edittext_cpassword"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginLeft="28dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginStart="28dp"
+                                android:layout_marginTop="-30dp"
+                                android:ems="10"
+                                android:hint="Retype your password"
+                                android:inputType="textPassword" />
+
+                            <CheckBox
+                                android:id="@+id/checkbox_authority"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="30dp"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Authority Login"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <FrameLayout
+                                android:id="@+id/frame_ifauthority"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-20dp"
+                                android:visibility="gone">
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:text="Authority"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textSize="22sp"
+                                    android:textStyle="normal|bold" />
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginStart="150dp"
+                                    android:text="Department"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textSize="22sp"
+                                    android:textStyle="normal|bold" />
+
+                                <Spinner
+                                    android:id="@+id/spinner"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="50dp"
+                                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                                <Spinner
+                                    android:id="@+id/spinner2"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginStart="150dp"
+                                    android:layout_marginTop="50dp"
+                                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_button_sign"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="30dp"
+                                android:gravity="right|center_vertical"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/button_sign_reset"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Reset" />
+
+                                <Button
+                                    android:id="@+id/button_signup"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Submit" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </ScrollView>
+
+                    <LinearLayout
+                        android:id="@+id/layout_faq"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/no_padding"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView15"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/customborder_gray"
+                            android:text="FAQs"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                            android:textSize="20dp" />
+
+                        <ScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="15dp">
+
+                            <TableLayout
+                                android:id="@+id/faq_table"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:shrinkColumns="0"
+                                android:stretchColumns="0">
+
+                                <TableRow
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="What is uReporter all about?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="uReporter is a citizen driven machanism for depicting the overall scenario of the problems people are facing due to lack of proper response of the authority. It is basically a platform for the people to take a stand against it."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="Is it safe to submit reports here?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="Safety of the victims is our topmost priority. All of the personal information are kept safe and are not shared with anyone. But the identity of the false information providers will be published."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="Does this site maintain direct communication with the service providers?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="Yes. We help them know your problems and also publish the overall response."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="How can this site be trusted?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="Well, basically people have no gain other than solving their problems here. So, it is expected that everyone will help providing with true information. And obviously if any culprit is found providing misleading or false information, his identity will be disclosed to everyone with evidence."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="Why does this site need customer information?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans5"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="In order to ensure the acceptability of the submitted reports, we need victims identity. Besides, for communication purpose this might also be needed."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="Does this site include any charge ?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans6"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="No, this site is completely free and will always be free."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="60px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaq7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape_gray"
+                                        android:padding="10dp"
+                                        android:text="Are comments and other responses compulsory?"
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+                                <TableRow
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:minHeight="80px">
+
+
+                                    <TextView
+                                        android:id="@+id/textViewfaqans7"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:background="@drawable/cell_shape"
+                                        android:padding="10dp"
+                                        android:singleLine="false"
+                                        android:text="No, they are optional. People can comment in the respective section and provide other information if they want to give their opinion."
+                                        android:textColor="#000000"
+                                        android:textSize="15dp" />
+
+                                </TableRow>
+
+
+                            </TableLayout>
+                        </ScrollView>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:id="@+id/explore"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:orientation="vertical"
+                            android:visibility="visible">
+
+                            <LinearLayout
+                                android:id="@+id/layout_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/no_padding"
+                                android:descendantFocusability="beforeDescendants"
+                                android:focusable="true"
+                                android:focusableInTouchMode="true"
+                                android:orientation="vertical">
+
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/backgroundborder"
+                                    android:clickable="false"
+                                    android:text="Search"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textSize="25dp" />
+
+                                <FrameLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginTop="10dp"
+                                    android:visibility="visible">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginStart="30dp"
+                                        android:text="Authority"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                        android:textSize="22sp"
+                                        android:textStyle="normal|bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="150dp"
+                                        android:layout_marginStart="150dp"
+                                        android:text="Department"
+                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                        android:textSize="22sp"
+                                        android:textStyle="normal|bold" />
+
+                                    <Spinner
+                                        android:id="@+id/spinner_search"
+                                        android:layout_width="110dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="30dp"
+                                        android:layout_marginStart="30dp"
+                                        android:layout_marginTop="50dp"
+                                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                                    <Spinner
+                                        android:id="@+id/spinner_search2"
+                                        android:layout_width="120dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="150dp"
+                                        android:layout_marginStart="150dp"
+                                        android:layout_marginTop="50dp"
+                                        android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                                </FrameLayout>
+
+                                <Button
+                                    android:id="@+id/button_search"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="120dp"
+                                    android:layout_marginStart="120dp"
+                                    android:layout_marginTop="20dp"
+                                    android:layout_weight="1"
+                                    android:text="Search" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_explore"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="20dp"
+                                android:background="@drawable/no_padding"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/textViewtotalreport"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/customborder_gray"
+                                    android:text="Total Reports"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                    android:textSize="20dp" />
+
+                                <HorizontalScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginHorizontal="20dp"
+                                    android:layout_marginVertical="20dp">
+
+                                    <TableLayout
+
+                                        android:id="@+id/tablelayout_explore"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent">
+
+                                        <TableRow
+                                            android:id="@+id/tablerow_main"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:minHeight="60px">
+
+
+                                            <TextView
+                                                android:id="@+id/textView13a4"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/cell_shape"
+                                                android:padding="10dp"
+                                                android:text="Report_ID"
+                                                android:textAlignment="center"
+                                                android:textColor="#000000"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView13a3"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/cell_shape"
+                                                android:padding="10dp"
+                                                android:text="Submission_Time"
+                                                android:textAlignment="center"
+                                                android:textColor="#000000"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView13a2"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/cell_shape"
+                                                android:padding="10dp"
+                                                android:text="Short Description"
+                                                android:textAlignment="center"
+                                                android:textColor="#000000"
+                                                android:textStyle="normal|bold" />
+
+                                            <TextView
+                                                android:id="@+id/textView13a"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/cell_shape"
+                                                android:padding="10dp"
+                                                android:text="Responsible_Authority"
+                                                android:textAlignment="center"
+                                                android:textColor="#000000"
+                                                android:textStyle="normal|bold" />
+
+                                        </TableRow>
+
+
+                                    </TableLayout>
+
+                                </HorizontalScrollView>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/layout_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/no_padding"
+                                android:orientation="vertical"
+                                android:visibility="visible">
+
+                                <TextView
+                                    android:id="@+id/textView41"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/customborder_gray"
+                                    android:text="Detail Report"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                    android:textSize="20dp" />
+
+                                <ScrollView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_margin="15dp">
+
+                                    <TableLayout
+                                        android:id="@+id/detail_table"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:shrinkColumns="0"
+                                        android:stretchColumns="0">
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:minHeight="80px">
+
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_report"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="0dp"
+                                                android:layout_marginTop="30dp"
+                                                android:background="@drawable/no_padding"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/customborder_gray"
+                                                    android:text="Report"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                                    android:textSize="20dp" />
+
+                                                <FrameLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:padding="10dp">
+
+                                                    <TextView
+                                                        android:id="@+id/tv_reportid"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="120dp"
+                                                        android:layout_marginStart="120dp"
+                                                        android:text="1"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:text="Report Id : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="40dp"
+                                                        android:text="User ID : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tv_user"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="90dp"
+                                                        android:layout_marginStart="90dp"
+                                                        android:layout_marginTop="40dp"
+                                                        android:text="surajsingh"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="80dp"
+                                                        android:text="Responsible : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tv_authority"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="110dp"
+                                                        android:text="HoD, CSE, BUET"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="150dp"
+                                                        android:text="Submission Time : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tv_report_time"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="180dp"
+                                                        android:text="2017-10-08 13:28:29"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="220dp"
+                                                        android:text="Description : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+
+                                                    <TextView
+                                                        android:id="@+id/tv_description"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="250dp"
+                                                        android:text="We will be looking forward for ur request."
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+
+                                                </FrameLayout>
+
+                                            </LinearLayout>
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:minHeight="80px">
+
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_feedback"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="0dp"
+                                                android:layout_marginTop="30dp"
+                                                android:background="@drawable/no_padding"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/customborder_gray"
+                                                    android:text="Authority Feedback"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                                    android:textSize="20dp" />
+
+                                                <FrameLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:padding="10dp">
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:text="Authority ID : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tv_authorityid"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="30dp"
+                                                        android:text="HoD, CSE, BUET"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="70dp"
+                                                        android:text="Submission Time : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tv_feedback_time"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="100dp"
+                                                        android:text="2017-10-08 13:28:29"
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+                                                    <TextView
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginTop="140dp"
+                                                        android:text="Feedback : "
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp"
+                                                        android:textStyle="normal|bold" />
+
+
+                                                    <TextView
+                                                        android:id="@+id/tv_feedback"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="170dp"
+                                                        android:text="We will be looking forward for ur request."
+                                                        android:textColor="#000000"
+                                                        android:textSize="20dp" />
+
+
+                                                </FrameLayout>
+
+                                            </LinearLayout>
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:id="@+id/tr_usercomments"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent">
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_usercomments"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="match_parent"
+                                                android:background="@drawable/no_padding"
+                                                android:orientation="vertical"
+                                                android:visibility="visible">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:background="@drawable/customborder_gray"
+                                                    android:text="User Comments"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                                    android:textSize="20dp" />
+
+                                                <TableLayout
+                                                    android:id="@+id/comments_table"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="10dp"
+                                                    android:shrinkColumns="0"
+                                                    android:stretchColumns="0">
+
+
+                                                </TableLayout>
+
+                                            </LinearLayout>
+                                        </TableRow>
+
+                                        <TableRow
+                                            android:id="@+id/tr_comment"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:minHeight="80px">
+
+
+                                            <LinearLayout
+                                                android:id="@+id/layout_comment"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_margin="0dp"
+                                                android:layout_marginTop="30dp"
+                                                android:background="@drawable/no_padding"
+                                                android:orientation="vertical">
+
+                                                <TextView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="@drawable/customborder_gray"
+                                                    android:text="Comment"
+                                                    android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                                                    android:textSize="20dp" />
+
+                                                <LinearLayout
+                                                    android:id="@+id/Linear3"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_margin="12dp"
+                                                    android:descendantFocusability="beforeDescendants"
+                                                    android:focusable="true"
+                                                    android:focusableInTouchMode="true"
+                                                    android:orientation="vertical">
+
+
+                                                    <CheckBox
+                                                        android:id="@+id/checkBox_comment"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginHorizontal="12dp"
+                                                        android:layout_marginVertical="5dp"
+                                                        android:text="Comment Anonymous"
+                                                        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginHorizontal="10dp"
+                                                        android:layout_marginVertical="10dp"
+                                                        android:text="Comment"
+                                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                                        android:textSize="22sp"
+                                                        android:textStyle="normal|bold" />
+
+                                                    <EditText
+                                                        android:id="@+id/editText_comment"
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginHorizontal="10dp"
+                                                        android:layout_marginVertical="10dp"
+                                                        android:background="@drawable/cell_shape"
+                                                        android:drawableTop="@color/colorPrimary"
+                                                        android:ems="10"
+                                                        android:gravity="top|left"
+                                                        android:inputType="textMultiLine"
+                                                        android:lines="8"
+                                                        android:maxLines="10"
+                                                        android:minLines="6"
+                                                        android:scrollbars="vertical"
+                                                        android:theme="@style/Theme.AppCompat.Light" />
+
+                                                    <TextView
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginHorizontal="12dp"
+                                                        android:layout_marginVertical="5dp"
+                                                        android:text="Your information should be correct and concise."
+                                                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                                        android:textSize="20sp" />
+
+                                                    <LinearLayout
+                                                        android:layout_width="match_parent"
+                                                        android:layout_height="match_parent"
+                                                        android:layout_marginHorizontal="40dp"
+                                                        android:layout_marginVertical="30dp"
+                                                        android:gravity="right|center_vertical"
+                                                        android:orientation="horizontal">
+
+                                                        <Button
+                                                            android:id="@+id/reset_comment"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="1"
+                                                            android:text="Reset" />
+
+                                                        <Button
+                                                            android:id="@+id/comment_button"
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_weight="1"
+                                                            android:text="Submit" />
+                                                    </LinearLayout>
+
+
+                                                </LinearLayout>
+
+                                            </LinearLayout>
+                                        </TableRow>
+
+
+                                    </TableLayout>
+                                </ScrollView>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="beforeDescendants"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:id="@+id/ScrollView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:descendantFocusability="beforeDescendants"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="12dp"
+                            android:background="@drawable/no_padding"
+                            android:descendantFocusability="beforeDescendants"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/textView2_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/backgroundborder"
+                                android:clickable="false"
+                                android:text="@string/submit_report"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="30sp" />
+
+                            <TextView
+                                android:id="@+id/textView2_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Reporter Information"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <TextView
+                                android:id="@+id/textView11"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="12dp"
+                                android:layout_marginVertical="1dp"
+                                android:text="Anonymous report will lose credibility"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="20sp" />
+
+                            <CheckBox
+                                android:id="@+id/checkBox_submit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="12dp"
+                                android:layout_marginVertical="5dp"
+                                android:text="Report Anonymous"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+                            <TextView
+                                android:id="@+id/shortdescription"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:text="Short Description"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="22sp"
+                                android:textStyle="normal|bold" />
+
+                            <EditText
+                                android:id="@+id/editText_submit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:layout_marginVertical="10dp"
+                                android:background="@drawable/cell_shape"
+                                android:drawableTop="@color/colorPrimary"
+                                android:ems="10"
+                                android:gravity="top|left"
+                                android:inputType="textMultiLine"
+                                android:lines="8"
+                                android:maxLines="10"
+                                android:minLines="6"
+                                android:scrollbars="vertical"
+                                android:theme="@style/Theme.AppCompat.Light" />
+
+                            <TextView
+                                android:id="@+id/textView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="12dp"
+                                android:layout_marginVertical="5dp"
+                                android:text="Your information should be correct and concise."
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="20sp" />
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="-20dp">
+
+                                <TextView
+                                    android:id="@+id/textView51"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Authority"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textSize="22sp"
+                                    android:textStyle="normal|bold" />
+
+                                <TextView
+                                    android:id="@+id/textView52"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginStart="150dp"
+                                    android:layout_marginTop="20dp"
+                                    android:text="Department"
+                                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                    android:textSize="22sp"
+                                    android:textStyle="normal|bold" />
+
+                                <Spinner
+                                    android:id="@+id/submit_spinner"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="30dp"
+                                    android:layout_marginStart="30dp"
+                                    android:layout_marginTop="65dp" />
+
+                                <Spinner
+                                    android:id="@+id/submit_spinner2"
+                                    android:layout_width="120dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="150dp"
+                                    android:layout_marginStart="150dp"
+                                    android:layout_marginTop="65dp"
+                                    android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
+                            </FrameLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginHorizontal="50dp"
+                                android:layout_marginVertical="30dp"
+                                android:gravity="right|center_vertical"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/reset_sub_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Reset" />
+
+                                <Button
+                                    android:id="@+id/submit_button"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:text="Submit" />
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/Home"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="12dp"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ScrollView
+                        android:id="@+id/ScrollView1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/no_padding"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/customborder_gray"
+                                android:clickable="false"
+                                android:text="@string/we_reporter"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                android:textSize="40sp" />
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="10dp"
+                                android:text="@string/in_day_to_day_life_we_the_common_people_face_different_types_of_social_problems_around_us_but_most_often_these_issues_cannot_be_reported_properly_to_the_proper_authorities_due_to_some_massive_roadblocks_between_victim_and_concerned_authorities_security_threat_political_pressure_lack_of_knowledge_about_responsible_authorities_are_the_most_prevalent_obstacles_in_our_country_also_there_exists_negligence_of_related_authority_like_police_rab_etc_to_overcome_these_roadblocks_we_want_to_build_ureporter_a_unified_online_reporting_system_which_will_send_the_reports_as_soon_as_possible_to_proper_authorities_after_successful_completion_of_several_validation_steps_and_reporters_personal_information_will_be_hidden_for_this_purpose_we_will_build_a_central_repository_system_to_store_the_reports_from_common_people_here_people_can_also_share_their_experiences_supplement_the_previous_reports_compliment_about_any_authority_we_will_generate_periodical_reports_through_mining_the_valid_data_and_public_survey_which_depicts_the_real_scenario_of_the_society"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                tools:layout_marginTop="20dp" />
+
+                        </LinearLayout>
+
+                    </ScrollView>
+
+                </LinearLayout>
+
+            </FrameLayout>
+        </LinearLayout>
+
+    </TabHost>
+
+</android.support.constraint.ConstraintLayout>
